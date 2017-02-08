@@ -1,0 +1,14 @@
+<?php if(isset($this->post)): $post = $this->post; ?>
+	<?php if(trim($post['name']) == ''): $errors[] = 'Geen naam ingevoert'; ?>
+	<?php endif ?>
+
+
+	<?php if(trim($post['password']) == ''): $errors[] = 'Geen wachtwoord ingevoert'; ?>
+	<?php endif ?>
+	<?php if(isset($errors)): ?>
+		<?php  return  $this->partial('partials/login/login-error.phtml', array('errors' => $errors)); ?>
+
+	<?php endif ?>
+
+
+<?php endif ?>
