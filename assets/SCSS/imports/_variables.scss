@@ -1,0 +1,40 @@
+/******************
+ * SCSS Variables   *
+ ******************/
+
+//== Typography
+$fnt-default: 				'Proximanova';
+$fnt-head: 					'Streetvertising';
+
+$fnt-small-size:       		13px;
+$fnt-default-size:     		16px;
+$fnt-medium-size:      		18px;
+$fnt-large-size:       		24px;
+
+$fnt-line-height:      		26px;
+
+//== Colors
+$clr-white: 				#ffffff;
+$clr-grey:					#e5e5e5;
+$clr-grey-dk:				#5f5f5f;
+$clr-text:					#333333;
+
+$clr-main: 					#009ee2;
+$clr-main-dk: 				#0096d6;
+$clr-second: 				#ffd400;
+
+$clr-border-lt:				#111111;
+
+//== Blocks
+$small-block:				125px;
+$medium-block:				250px;
+$large-block:				525px;
+$full:						100%;
+$half:						50%;
+
+//== Margins & Paddings
+$mp-tiny:					2px;
+$mp-small: 					15px;
+$mp-medium: 				30px;
+$mp-large: 					60px;
+$mp-huge: 					90px;

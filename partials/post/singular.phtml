@@ -1,0 +1,15 @@
+<header class="singular-header">
+    <h1 class="singular-title" itemprop="name"><?php the_title() ?></h1>
+    <div class="singular-meta">
+        <meta itemprop="datePublished" content="<?php echo get_the_date('c') ?>" />
+        <p><?php echo get_the_date('d F Y') ?></p>
+    </div>
+</header>
+
+<div class="singular-content std" itemprop="articleBody">
+    <?php the_content() ?>
+</div>
+
+<footer class="singular-footer std">
+    <a class="readmore" href="<?php echo get_permalink(get_option('theme_page_news')) ?>"><?php echo __('Terug naar overzicht') ?></a>
+</footer>

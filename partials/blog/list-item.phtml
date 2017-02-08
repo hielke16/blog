@@ -1,0 +1,10 @@
+<?php if(isset($this->post)): $post = $this->post; ?>
+	<?php $postTitle =  get_post_field('post_title', $post->ID ); ?>
+	<?php $postContent =  get_post_field('post_content', $post->ID ); ?>
+	<a href="blog?id=<?php echo get_post_field('ID',$post->ID)?>" >
+		<span class="blog">
+			<h1><?php echo $postTitle ?></h1>
+			<p><?php echo $postContent?></p>
+		</span>
+	</a>
+<?php endif; ?>

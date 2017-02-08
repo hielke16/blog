@@ -1,0 +1,7 @@
+<?php if (have_posts()): ?>
+<section class="display-list page-list">
+    <?php while (have_posts()): the_post(); ?>
+    <?php echo $this->partial('partials/page/list-item.phtml') ?>
+    <?php endwhile; ?>
+</section>
+<?php endif ?>

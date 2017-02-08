@@ -1,0 +1,407 @@
+@import 'variables';
+[class*="block-grid-"],
+.row .row {
+    margin: 0;
+}
+
+// Last column float left 
+[class*="column"]+[class*="column"]:last-child {
+    float: left;
+}
+
+html,
+body {
+    min-height: 100%;
+    background: $clr-grey;
+    line-height: $fnt-line-height;
+    color: $clr-text;
+}
+
+body,
+input,
+textarea {
+    font-family: $fnt-default, sans-serif;
+    font-size: $fnt-default-size;
+    color: $clr-grey-dk;
+    line-height: $fnt-line-height;
+}
+
+a {
+    text-decoration: none;
+    color: $clr-grey-dk;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.std {
+    p {
+        margin: 0 0 20px;
+        img {
+            &.left {
+                float: left;
+            }
+            &.right {
+                float: right;
+            }
+        }
+    }
+    a {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $fnt-head, sans-serif;
+    margin: 0;
+    text-decoration: none;
+    color: $clr-text;
+}
+
+h1 {
+    font-size: $fnt-large-size;
+    line-height: normal;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: $fnt-large-size;
+    line-height: normal;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: $fnt-medium-size;
+    line-height: normal;
+    font-weight: 300;
+}
+
+h4 {
+    font-size: $fnt-default-size;
+    line-height: normal;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: $fnt-small-size;
+    line-height: normal;
+    font-weight: 300;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    text-decoration: none;
+}
+
+.std dl {
+    dl {
+        margin: 0 0 1.5em 0;
+        dt {
+            font-weight: normal;
+        }
+    }
+    dd {
+        margin-left: 1.5em;
+    }
+    table {
+        margin-bottom: 1.4em;
+    }
+    th {
+        font-weight: normal;
+    }
+    th,
+    td,
+    caption {
+        padding: 3px 10px 3px 0;
+    }
+    tfoot {
+        font-style: italic;
+    }
+    caption {
+        background: #eee;
+    }
+}
+
+.readmore {
+    text-transform: uppercase;
+    &:after {
+        padding-left: 25px;
+        @include font-awesome('\f054');
+        font-size: 12px;
+        margin-top: -1px;
+    }
+}
+
+.bottom-collapse-container {
+    overflow: hidden;
+    cursor: pointer;
+    .bottom-collapse {
+        background-color: $clr-grey;
+        bottom: -70px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 70px;
+        line-height: 70px;
+        @include transition();
+        span {
+            margin-top: 10px;
+            display: block;
+            @include transition(transform 0.35s);
+            @include transform(translate3d(0, 200%, 0));
+            text-transform: uppercase;
+        }
+        .fa {
+            font-size: 12px;
+            margin-top: 10px;
+            @include transition(transform 0.35s);
+            @include transform(translate3d(0, 200%, 0));
+        }
+    }
+    &:hover {
+        .bottom-collapse {
+            bottom: 0;
+            span,
+            .fa {
+                margin-top: 0;
+                @include transition-delay(0.05s);
+                @include transform(translate3d(0, 0, 0));
+            }
+            .fa {
+                @include transition-delay(0.125s);
+                @include transform(translate3d(0, 0, 0));
+            }
+        }
+    }
+}
+
+.hide {
+    overflow: hidden;
+    height: 0;
+}
+
+.nodisplay {
+    display: none;
+}
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 2em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 2em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/******************************************
+ * Border (single-line)                   *
+ * -------------------------------------- *
+ * a: all             l: light            *
+ * t: top             m: medium           *
+ * r: right           d: dark             *
+ * b: bottom          b: black            *
+ * l: left                                *
+ * h: horizontal                          *
+ * v: vertical                            *
+ ******************************************/
+.no-border { border: none }
+
+.bal { border: 1px solid $clr-border-lt }
+.bam { border: 1px solid #dadada }
+.bad { border: 1px solid #ccc }
+.bab { border: 1px solid #000 }
+
+.btl { border-top: 1px solid $clr-border-lt }
+.btm { border-top: 1px solid #dadada }
+.btd { border-top: 1px solid #ccc }
+.btb { border-top: 1px solid #000 }
+
+.brl { border-right: 1px solid $clr-border-lt }
+.brm { border-right: 1px solid #dadada }
+.brd { border-right: 1px solid #ccc }
+.brb { border-right: 1px solid #000 }
+
+.bbl { border-bottom: 1px solid $clr-border-lt }
+.bbm { border-bottom: 1px solid #dadada }
+.bbd { border-bottom: 1px solid #ccc }
+.bbb { border-bottom: 1px solid #000 }
+
+.bll { border-left: 1px solid $clr-border-lt }
+.blm { border-left: 1px solid #dadada }
+.bld { border-left: 1px solid #ccc }
+.blb { border-left: 1px solid #000 }
+
+.bhl { border-top: 1px solid $clr-border-lt; border-bottom: 1px solid $clr-border-lt }
+.bhm { border-top: 1px solid #dadada; border-bottom: 1px solid #dadada }
+.bhd { border-top: 1px solid #ccc; border-bottom: 1px solid #ccc }
+.bhb { border-top: 1px solid #000; border-bottom: 1px solid #000 }
+
+.bvl { border-left: 1px solid $clr-border-lt; border-right: 1px solid $clr-border-lt }
+.bvm { border-left: 1px solid #dadada; border-right: 1px solid #dadada }
+.bvd { border-left: 1px solid #ccc; border-right: 1px solid #ccc }
+.bvb { border-left: 1px solid #000; border-right: 1px solid #000 }
+
+
+/******************************************
+ * Border radius                          *
+ * -------------------------------------- *
+ * a: all                n: none          *
+ * t: top                t: tiny (2px)    *
+ * r: right              s: small (5px)   *
+ * b: bottom                              *
+ * l: left                                *
+ ******************************************/
+
+.bran { border-radius: 0 }
+.brat { border-radius: $mp-tiny }
+.bras { border-radius: 5px }
+
+.brtn { border-top-left-radius: 0;   border-top-right-radius: 0 }
+.brtt { border-top-left-radius: $mp-tiny; border-top-right-radius: $mp-tiny }
+.brts { border-top-left-radius: 5px; border-top-right-radius: 5px }
+
+.brrn { border-top-right-radius: 0;   border-bottom-right-radius: 0 }
+.brrt { border-top-right-radius: $mp-tiny; border-bottom-right-radius: $mp-tiny }
+.brrs { border-top-right-radius: 5px; border-bottom-right-radius: 5px }
+
+.brbn { border-bottom-left-radius: 0;   border-bottom-right-radius: 0 }
+.brbt { border-bottom-left-radius: $mp-tiny; border-bottom-right-radius: $mp-tiny }
+.brbs { border-bottom-left-radius: 5px; border-bottom-right-radius: 5px }
+
+.brln { border-top-left-radius: 0;   border-bottom-left-radius: 0 }
+.brlt { border-top-left-radius: $mp-tiny; border-bottom-left-radius: $mp-tiny }
+.brls { border-top-left-radius: 5px; border-bottom-left-radius: 5px }
+
+
+/******************************************
+ * Margins & Paddings                     *
+ * -------------------------------------- *
+ * a: all                n: none          *
+ * t: top                t: tiny (2px)    *
+ * r: right              s: small (5px)   *
+ * b: bottom             m: medium (10px) *
+ * l: left               l: large (15px)  *
+ * h: horizontal         h: huge (20px)   *
+ * v: vertical                            *
+ ******************************************/
+.man { margin: 0 }
+.mat { margin: $mp-tiny }
+.mas { margin: $mp-small }
+.mam { margin: $mp-medium }
+.mal { margin: $mp-large }
+.mah { margin: $mp-huge}
+
+.mtn { margin-top: 0 }
+.mtt { margin-top: $mp-tiny }
+.mts { margin-top: $mp-small }
+.mtm { margin-top: $mp-medium }
+.mtl { margin-top: $mp-large }
+.mth { margin-top: $mp-huge}
+
+.mrn { margin-right: 0 }
+.mrt { margin-right: $mp-tiny }
+.mrs { margin-right: $mp-small }
+.mrm { margin-right: $mp-medium }
+.mrl { margin-right: $mp-large }
+.mrh { margin-right: $mp-huge}
+
+.mbn { margin-bottom: 0 }
+.mbt { margin-bottom: $mp-tiny }
+.mbs { margin-bottom: $mp-small }
+.mbm { margin-bottom: $mp-medium }
+.mbl { margin-bottom: $mp-large }
+.mbh { margin-bottom: $mp-huge}
+
+.mln { margin-left: 0 }
+.mlt { margin-left: $mp-tiny }
+.mls { margin-left: $mp-small }
+.mlm { margin-left: $mp-medium }
+.mll { margin-left: $mp-large }
+.mlh { margin-left: $mp-huge}
+
+.mhn { margin-left: 0; margin-right: 0 }
+.mht { margin-left: $mp-tiny; margin-right: $mp-tiny }
+.mhs { margin-left: $mp-small; margin-right: $mp-small }
+.mhm { margin-left: $mp-medium; margin-right: $mp-medium }
+.mhl { margin-left: $mp-large; margin-right: $mp-large }
+.mhh { margin-left: $mp-medium; margin-right: $mp-huge}
+
+.mvn { margin-top: 0; margin-bottom: 0 }
+.mvt { margin-top: $mp-tiny; margin-bottom: $mp-tiny }
+.mvs { margin-top: $mp-small; margin-bottom: $mp-small }
+.mvm { margin-top: $mp-medium; margin-bottom: $mp-medium }
+.mvl { margin-top: $mp-large; margin-bottom: $mp-large }
+.mvh { margin-top: $mp-medium; margin-bottom: $mp-huge}
+
+.pan { padding: 0 }
+.pat { padding: $mp-tiny }
+.pas { padding: $mp-small }
+.pam { padding: $mp-medium }
+.pal { padding: $mp-large }
+.pah { padding: $mp-huge}
+
+.ptn { padding-top: 0 }
+.ptt { padding-top: $mp-tiny }
+.pts { padding-top: $mp-small }
+.ptm { padding-top: $mp-medium }
+.ptl { padding-top: $mp-large }
+.pth { padding-top: $mp-huge}
+
+.prn { padding-right: 0 }
+.prt { padding-right: $mp-tiny }
+.prs { padding-right: $mp-small }
+.prm { padding-right: $mp-medium }
+.prl { padding-right: $mp-large }
+.prh { padding-right: $mp-huge}
+
+.pbn { padding-bottom: 0 }
+.pbt { padding-bottom: $mp-tiny }
+.pbs { padding-bottom: $mp-small }
+.pbm { padding-bottom: $mp-medium }
+.pbl { padding-bottom: $mp-large }
+.pbh { padding-bottom: $mp-huge}
+
+.pln { padding-left: 0 }
+.plt { padding-left: $mp-tiny }
+.pls { padding-left: $mp-small }
+.plm { padding-left: $mp-medium }
+.pll { padding-left: $mp-large }
+.plh { padding-left: $mp-huge}
+
+.phn { padding-left: 0; padding-right: 0 }
+.pht { padding-left: $mp-tiny; padding-right: $mp-tiny }
+.phs { padding-left: $mp-small; padding-right: $mp-small }
+.phm { padding-left: $mp-medium; padding-right: $mp-medium }
+.phl { padding-left: $mp-large; padding-right: $mp-large }
+.phh { padding-left: $mp-medium; padding-right: $mp-huge}
+
+.pvn { padding-top: 0; padding-bottom: 0 }
+.pvt { padding-top: $mp-tiny; padding-bottom: $mp-tiny }
+.pvs { padding-top: $mp-small; padding-bottom: $mp-small }
+.pvm { padding-top: $mp-medium; padding-bottom: $mp-medium }
+.pvl { padding-top: $mp-large; padding-bottom: $mp-large }
+.pvh { padding-top: $mp-medium; padding-bottom: $mp-huge}

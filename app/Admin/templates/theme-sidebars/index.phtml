@@ -1,0 +1,27 @@
+<div class="wrap">
+    <h2>Sidebars <a href="admin.php?page=theme-sidebars&amp;action=add" class="add-new-h2">Nieuwe sidebar</a></h2>
+    <form action="admin.php?page=theme-sidebars" method="post">
+        <?php $this->list->display() ?>
+    </form>
+</div>
+<br class="clear" />
+
+<div class="wrap">
+    <h2>Standaard sidebars</h2>
+    <form method="post" action="admin.php?page=theme-sidebars&amp;action=defaults">
+        <?php foreach ($this->pageLayoutService->getSidebars() as $sidebarAreaCode => $sidebarAreaName): ?>
+        <?php $current = $this->pageLayoutService->getDefaultSidebar($sidebarAreaCode) ?>
+        <p><label><?php echo esc_html($sidebarAreaName) ?><br />
+            <select name="default[<?php echo $sidebarAreaCode ?>]">
+                <option value="">-- Geen</option>
+                <?php foreach ($this->sidebars as $sidebar): ?>
+
+                <option value="<?php echo $sidebar->id ?>" <?php selected($sidebar->id, $current) ?>><?php echo esc_html($sidebar->name) ?></option>
+                <?php endforeach ?>
+            </select></label>
+        </p>
+        <?php endforeach ?>
+        <button class="button-secondary">Opslaan</button>
+    </form>
+</div>
+<br class="clear" />

@@ -1,0 +1,109 @@
+body,
+input,
+textarea {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.67em;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration: underline;
+}
+.std p {
+  margin: 0 0 20px;
+}
+.std a {
+  text-decoration: underline;
+}
+.std a:hover {
+  text-decoration: none;
+}
+.std p img.left {
+  float: left;
+}
+.std p img.right {
+  float: right;
+}
+h1 {
+  font-family: "Arial", sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  line-height: normal;
+  margin: 0 0 0.67em;
+  color: #000;
+  font-weight: 300;
+}
+h2 {
+  font-family: "Arial", sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  line-height: normal;
+  margin: 0 0 0.67em;
+  color: #000;
+  font-weight: 300;
+}
+h3 {
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  line-height: normal;
+  margin: 0 0 0.67em;
+  color: #000;
+  font-weight: 300;
+}
+h4 {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: normal;
+  margin: 0 0 0.67em;
+  color: #000;
+  font-weight: 300;
+}
+h5 {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+  line-height: normal;
+  margin: 0 0 0.67em;
+  color: #000;
+  font-weight: 300;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none;
+}
+.std dl {
+  margin: 0 0 1.5em 0;
+}
+.std dl dt {
+  font-weight: normal;
+}
+.std dd {
+  margin-left: 1.5em;
+}
+.std table {
+  margin-bottom: 1.4em;
+}
+.std th {
+  font-weight: normal;
+}
+.std th,
+.std td,
+.std caption {
+  padding: 3px 10px 3px 0;
+}
+.std tfoot {
+  font-style: italic;
+}
+.std caption {
+  background: #eee;
+}

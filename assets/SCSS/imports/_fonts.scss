@@ -1,0 +1,21 @@
+$fonts-url: '../fonts/';
+
+@font-face {
+  font-family: 'Streetvertising';
+    src:  url('#{$fonts-url}Streetvertising-Bold.ttf.woff') format('woff'),
+    url('#{$fonts-url}Streetvertising-Bold.ttf.svg#Streetvertising-Bold') format('svg'),
+    url('#{$fonts-url}Streetvertising-Bold.ttf.eot'),
+    url('#{$fonts-url}Streetvertising-Bold.eot?#iefix') format('embedded-opentype'); 
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Streetvertising-bd';
+    src:  url('#{$fonts-url}Streetvertising-Light.ttf.woff') format('woff'),
+    url('#{$fonts-url}Streetvertising-Light.ttf.svg#Streetvertising-Light') format('svg'),
+    url('#{$fonts-url}Streetvertising-Light.ttf.eot'),
+    url('#{$fonts-url}Streetvertising-Light.eot?#iefix') format('embedded-opentype'); 
+    font-weight: 900;
+    font-style: normal;
+}

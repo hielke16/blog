@@ -1,0 +1,41 @@
+<header class="header">
+    <div class="row">
+        <div class="large-3 columns">
+            <a class="logo" href="<?php echo home_url('/') ?>" title="<?php bloginfo('name') ?>">
+            	<img src="C:\xampp\htdocs\wordpress\wp-content\themes\webwijs-theme">-->
+            	<!-- <img src="<?php //bloginfo('stylesheet_directory') ?>/assets/img/logo.png" alt="<?php bloginfo('name') ?>"> -->
+            </a>
+        </div>
+        <div class="large-9 columns">
+            <?php
+                $defaults = array(
+                    'container' => false,
+                    'menu_class' => 'button-group right',
+                    'menu_id' => 'main-menu',
+                    'fallback_cb' => '',
+                    'link_before' => '<span>',
+                    'link_after' => '</span>',
+                    'theme_location' => 'main',
+                );
+                echo $this->menu('footer',$defaults);
+            ?>
+        </div>
+    </div>
+
+    <div class="search" id="searchform">
+        <div class="row">
+            <div class="large-12 columns">
+                <?php //echo $this->searchForm() ?>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-12 columns">
+            <a href="http://localhost/wordpress/">home</a>
+           <!-- <img src="http://placehold.it/1000x400&text=[img]">-->
+           <?php echo "<a href='http://localhost/wordpress/login'>login</a>";?>
+            <hr>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,18 @@
+<article class="list-item" itemscope itemtype="http://schema.org/Article">
+    <header class="entry-header">
+        <h2 class="entry-title" itemprop="name">
+            <a href="<?php echo get_permalink() ?>" itemprop="url" title="<?php echo esc_attr(get_the_title()) ?>"><?php the_title() ?></a>
+        </h2>
+        <div class="entry-meta">
+            <meta itemprop="datePublished" content="<?php echo get_the_date('c') ?>" />
+            <span class="day"><?php echo get_the_date('d') ?></span>
+            <span class="month"><?php echo get_the_date('M') ?></span>
+        </div>
+    </header>
+    <div class="entry-content std" itemprop="description">
+        <?php echo $this->excerpt() ?>
+    </div>
+    <footer class="entry-footer std">
+        <p class="readmore"><?php echo __('Lees verder') ?></p>
+    </footer>
+</article>

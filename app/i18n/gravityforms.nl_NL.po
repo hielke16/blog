@@ -1,0 +1,28 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Sjokki de Wit <sjokki@bekent.nl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: C:\Users\acancado\Rocketgenius\Sites\wp3\wp-content\plugins\gravityforms_1.6\form_display.php:487
+msgid "There was a problem with your submission."
+msgstr "Formulier kan niet verzonden worden."
+
+#: C:\Users\acancado\Rocketgenius\Sites\wp3\wp-content\plugins\gravityforms_1.6\form_display.php:487
+msgid "Errors have been highlighted below."
+msgstr "Controleer uw gegevens."
+
+#: C:\Users\acancado\Rocketgenius\Sites\wp3\wp-content\plugins\gravityforms_1.6\form_display.php:1194
+msgid "The uploaded file type is not allowed."
+msgstr "Dit type bestand is niet toegestaan."
+
+#: C:\Users\acancado\Rocketgenius\Sites\wp3\wp-content\plugins\gravityforms_1.6\form_display.php:1198
+#, php-format
+msgid "The uploaded file type is not allowed. Must be one of the following: %s"
+msgstr "Alleen %s bestanden zijn toegestaan"
+

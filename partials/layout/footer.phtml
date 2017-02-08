@@ -1,0 +1,24 @@
+<footer class="row footer">
+    <div class="large-12 columns">
+        <hr/>
+        <div class="row">
+            <div class="large-6 columns">
+                <p><span class="copyright">&copy; <?php echo date('Y') ?> <?php echo get_bloginfo('name') ?></span></p>
+            </div>
+            <div class="large-6 columns">
+            	<?php
+            		$defaults = array(
+			            'container' => false,
+			            'menu_class' => 'inline-list right',
+			            'menu_id' => 'footer-menu',
+			            'fallback_cb' => '',
+			            'link_before' => '<span>',
+			            'link_after' => '</span>',
+			            'theme_location' => 'footer',
+			        );
+            		echo $this->menu('footer',$defaults); 
+            	?>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,10 @@
+                <tr id="sidebar-<?php echo $this->item->id ?>" class="<?php echo $this->class?>">
+                    <th scope="row" class="check-column"><input type="checkbox" name="sidebars[]" value="<?php echo $this->item->id ?>"></th>
+                    <td class="column-sidebarname">
+                        <strong><a href="admin.php?page=theme-sidebars&amp;action=edit&amp;sidebar_id=<?php echo $this->item->id?>"><?php echo esc_html($this->item->name) ?></a></strong><br />
+                        <div class="row-actions">
+                            <span class="edit"><a href="admin.php?page=theme-sidebars&amp;action=edit&amp;sidebar_id=<?php echo $this->item->id?>">Bewerken</a></span> |
+                            <span class="delete"><a href="admin.php?page=theme-sidebars&amp;action=delete&amp;sidebar_id=<?php echo $this->item->id?>">Verwijderen</a></span>
+                        </div>
+                    </td>
+                </tr>

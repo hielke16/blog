@@ -1,0 +1,14 @@
+<?php $slide_image = wp_get_attachment_image_src($this->attachment_id, 'large');?>
+<div class="slide <?php echo $this->classname;?>" style="background-image: url(<?php echo $slide_image[0];?>);">
+  <div class="slide-content">
+    <?php if(!empty($this->title)):?>
+      <h3><?php echo apply_filters('the_title', $this->title);?></h3>
+    <?php endif;?>
+    <?php if(!empty($this->content)):?>
+      <?php echo apply_filters('the_content', $this->content);?>
+      <?php if(!empty($this->url['text'])):?>
+      <a href="<?php echo $this->url['href'];?>" title="<?php echo $this->url['title'];?>" class="btn btn-default"><?php echo $this->url['text'];?></a>
+      <?php endif;?>
+    <?php endif;?>
+  </div>
+</div>

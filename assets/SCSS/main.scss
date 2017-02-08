@@ -1,0 +1,36 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+@import 'base';
+
+@import 'partials/header';
+@import 'partials/template-home';
+@import 'partials/footer';
+@import 'partials/buttons';
+
+
+@import url('https://fonts.googleapis.com/css?family=Barrio|Dancing+Script');
+
+.blog{
+	width: 500px;
+	margin: 0 auto;
+	display:block;
+	height:100%;
+	margin-bottom:30px;
+	h1{
+		text-align: center;
+		margin-bottom: 20px;
+		font-size: 60px;
+		font-family: 'Barrio', cursive;
+	}
+	p{
+		font-size: 25px;
+		font-family: 'Dancing Script', cursive;
+	}
+}
+
+
+
+
+
+

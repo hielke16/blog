@@ -1,0 +1,6 @@
+{
+    "require": {
+        "doctrine/cache": "^1.5@dev",
+        "leafo/scssphp": "0.6.6"
+    }
+}

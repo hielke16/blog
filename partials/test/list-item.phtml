@@ -1,0 +1,8 @@
+<?php if(isset($this->post)): $post = $this->post; ?>
+	<?php $postName =  get_post_field('post_title', $post->ID ); ?>
+	<?php $postLastName =  get_post_field('post_content', $post->ID ); ?>
+	<div class="blog">
+		<h1><?php echo $postName ?></h1>
+		<p><?php echo $postLastName ?></p>
+	</div>
+<?php endif; ?>

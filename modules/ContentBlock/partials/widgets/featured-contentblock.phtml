@@ -1,0 +1,9 @@
+<?php if (isset($this->post) && is_object($this->post)): $post = $this->post ?>
+<div class="std">
+	<?php echo "<pre>"; ?>
+	<!--<?php var_dump($post); ?>
+	-->
+    <h1><?php echo apply_filters('the_content', $post->post_title) ?></h1>
+    <p><?php echo apply_filters('the_content', $post->post_content) ?></p>
+</div>
+<?php endif ?>

@@ -1,0 +1,44 @@
+@import "imports/forms.less";
+@import "imports/print.less";
+@import "imports/reset.less";
+@import "imports/responsive.less";
+@import "imports/text.less";
+html,
+body {
+  min-height: 100%;
+  background: #fff;
+}
+.notify-message {
+  clear: both;
+  padding: 8px;
+  margin-bottom: 2em;
+  border: 2px solid #ddd;
+  position: relative;
+}
+.notify-message p {
+  margin: 0;
+}
+.notify-message.error {
+  background: #FBE3E4;
+  color: #8a1f11;
+  border-color: #FBC2C4;
+}
+.notify-message.notice {
+  background: #FFF6BF;
+  color: #514721;
+  border-color: #FFD324;
+}
+.notify-message.success {
+  background: #E6EFC2;
+  color: #264409;
+  border-color: #C6D880;
+}
+.notify-message.error a {
+  color: #8a1f11;
+}
+.notify-message.notice a {
+  color: #514721;
+}
+.notify-message.success a {
+  color: #264409;
+}

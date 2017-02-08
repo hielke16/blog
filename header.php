@@ -1,0 +1,5 @@
+<?php
+
+/*
+** See layout.php
+*/

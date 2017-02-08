@@ -1,0 +1,65 @@
+<style type="text/css">
+    #wpfooter{
+      position: static!important;
+    }
+    .tabs-container{
+      height: auto;
+      display: block;
+    }
+    #tabs{
+      /*position: sticky;*/
+      top: 50px;
+    }
+    #tabs ul {  margin: 2em 0; padding: 0 0 0 5px; }
+    #tabs ul li { display: inline; margin: 0 1px }
+    #tabs ul a { width: 100%;display: inline-block; color: #222; text-decoration: none; font-size: 120%; margin-bottom: -1px; padding: 7px 20px; border: 1px solid #dfdfdf; border-radius: 3px 3px 0 0; background-color: #f1f1f1; background-image: -ms-linear-gradient(top, #f9f9f9, #ececec); background-image: -moz-linear-gradient(top, #f9f9f9, #ececec); background-image: -o-linear-gradient(top, #f9f9f9, #ececec); background-image: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#ececec)); background-image: -webkit-linear-gradient(top, #f9f9f9, #ececec); background-image: linear-gradient(top, #f9f9f9, #ececec); }
+    #tabs ul li.ui-state-active a,
+    #tabs ul li:hover a { background: #fff;  }
+    #tabs ul li a:focus{ outline: none; outline-offset: 0; box-shadow: none;}
+</style>
+
+<div class="container-fluid">
+<div class="wrap">
+  <h2><?php echo _('Thema instellingen');?></h2>
+  <form action="admin.php?page=theme-settings-index" method="<?php echo $this->form->attribs['method'];?>">
+      <div class="row">
+        <div class="" id="tabs">
+          <ul class="col-lg-3 col-md-4">
+            <?php usort($this->form->displayGroups, function($a, $b){
+              return strcmp($a->title, $b->title);
+            });?>
+            <?php foreach($this->form->displayGroups as $key => $value):?>
+              <li><a href="#tab-<?php echo $key;?>"><?php echo $value->title;?></a>
+            <?php endforeach;?>
+            <li>
+              <p class="submit">
+                  <button type="submit" name="submit" id="submit" class="button-primary widefat"><?php _e('Wijzigingen opslaan') ?></button>
+              </p>
+            </li>
+          </ul>
+          <?php foreach($this->form->displayGroups as $key => $value): $group = $this->form->getDisplayGroup($key);?>
+            <div id="tab-<?php echo $key;?>" class="col-lg-9 col-md-8">
+              <h3><?php echo $value->title;?></h3>
+              <?php echo $group->render($this);?>
+            </div>
+          <?php endforeach; ?>
+        </div>
+
+
+          <?php wp_nonce_field('form-theme-settings') ?>
+        </div>
+      </div>
+  </form>
+</div>
+</div>
+    <script type="text/javascript">
+        jQuery(function($) {
+            $('#tabs').tabs({
+                activate: function (e, ui) {
+                    $.cookie('selected-tab', ui.newTab.index(), { path: '/' });
+                },
+                active: $.cookie('selected-tab')
+            });
+        });
+    </script>
+</div>

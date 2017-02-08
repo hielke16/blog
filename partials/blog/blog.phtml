@@ -1,0 +1,10 @@
+<?php if((isset($_GET['id']))&&($_GET['id'] > 0)): $id = (int)$_GET['id']; ?>
+
+	<?php $postTitle =  get_post_field('post_title', $this->posts[0]->ID ); ?>
+	<?php $postContent =  get_post_field('post_content', $this->posts[0]->ID );	?>
+
+		<div class="blog">
+			<h1><?php echo $postTitle ?></h1>
+			<p><?php echo $postContent?></p>
+		</div>	
+<?php endif; ?>

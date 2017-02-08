@@ -1,0 +1,10 @@
+<article class="list-item" itemscope itemtype="http://schema.org/Article">
+    <header class="entry-header">
+        <h2 class="entry-title" itemprop="name">
+            <a href="<?php echo get_permalink() ?>" itemprop="url" title="<?php echo esc_attr(get_the_title()) ?>"><?php the_title() ?></a>
+        </h2>
+    </header>
+    <div class="entry-content std" itemprop="description">
+        <?php echo $this->excerpt() ?>
+    </div>
+</article>

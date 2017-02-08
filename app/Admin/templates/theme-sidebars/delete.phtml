@@ -1,0 +1,16 @@
+<div class="wrap">
+    <h2>Sidebars verwijderen</h2>
+    <form method="post" action="">
+        <p>
+            <?php foreach ($this->sidebars as $sidebar): ?>
+            <?php echo sprintf('ID #%1s: %2s', $sidebar->id, $sidebar->display_name) ?><br />
+            <input type="hidden" name="sidebars[]" value="<?php echo $sidebar->id ?>" />
+            <?php endforeach ?>
+        </p>
+        <p class="submit">
+            <input type="hidden" name="action" value="delete" />
+            <input type="hidden" name="confirm" value="1" />
+            <button class="button-secondary">Verwijdering bevestigen</button>
+        </p>
+    </form>
+</div>
